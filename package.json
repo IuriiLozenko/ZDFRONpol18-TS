@@ -1,0 +1,15 @@
+{
+  "name": "zdfronpol18-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc --watch"
+  },
+  "keywords": [],
+  "author": "Kacper Żarna",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.9.4"
+  }
+}
