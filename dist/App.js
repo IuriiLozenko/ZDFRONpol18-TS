@@ -114,3 +114,22 @@ const canIBuyBeer = (person) => {
 canIBuyBeer(john);
 canIBuyBeer(anne);
 canIBuyBeer(child);
+// 8. TYPOWANIE LIST
+const jakasLista = [1, 2, 3, 4, 5, 6];
+const jakasLista2 = ["123", "345", "678"];
+const jakasLista3 = [1, "2", 3, "4"];
+const jakasLista4 = [
+    1,
+    "2",
+    3,
+    "4",
+    {
+        name: "Joshua",
+        surname: "Booker",
+        age: 0,
+        pet: "turtle",
+        profession: null,
+        parent: false,
+        child: true,
+    },
+];

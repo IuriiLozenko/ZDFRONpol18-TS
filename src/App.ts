@@ -207,3 +207,27 @@ const canIBuyBeer = (person: Person | Child): void => {
 canIBuyBeer(john);
 canIBuyBeer(anne);
 canIBuyBeer(child);
+
+// 8. TYPOWANIE LIST
+
+const jakasLista: number[] = [1, 2, 3, 4, 5, 6];
+
+const jakasLista2: string[] = ["123", "345", "678"];
+
+const jakasLista3: (string | number)[] = [1, "2", 3, "4"];
+
+const jakasLista4: (string | number | Child)[] = [
+  1,
+  "2",
+  3,
+  "4",
+  {
+    name: "Joshua",
+    surname: "Booker",
+    age: 0,
+    pet: "turtle",
+    profession: null,
+    parent: false,
+    child: true,
+  },
+];
