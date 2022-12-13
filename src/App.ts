@@ -61,7 +61,45 @@ button.addEventListener("click", () => {
   // 1. W jakiś sposób wylosuj czy użytkownik ma zniżke czy jej nie ma i zapisz do zmiennej true albo false (Math.random())
   const hasDiscount = Math.random() > 0.5 ? true : false; // Math.random zwraca liczbe od 0 1
   // 2. Ściągnij wartość z inputu textowego id name (wybranie inputu + ściągnięcie value, samo value zapisz do zmiennej)
-  const inputValue = +document.querySelector("input").value;
+  //   const inputValue = +document.querySelector("input").value;
+  const input = document.querySelector("input");
+  const inputValueRaw = input.value;
+  const inputValue = +inputValueRaw; // Number(inputValueRaw)
   // 3. Wykonaj console loga `You have to pay *tutaj cena obliczona przez funkcję calculatePrice, wywołaj ją tu wprowadzając jako argumenty wartości z pkt 2 i pkt 1.
   console.log(`You have to pay ${calculatePrice(inputValue, hasDiscount)}`);
 });
+
+// 4. UNION TYPES
+// let multipleTypes: number | string | boolean = 0;
+// multipleTypes = "lalalala";
+// multipleTypes = true;
+// multipleTypes = {} // blad
+
+// if(x == 5 || x == 1){
+//     ...
+// }
+
+// 5. TYPE ALIAS
+type mtv = number | string | boolean;
+
+let multipleTypes: mtv = 0;
+let multipleTypes1: mtv = "123";
+let multipleTypes2: mtv = true;
+let multipleTypes3: mtv = false;
+
+// 6. TYPE ALIAS + UNION TYPES: twarde ustawianie wartości
+type names = "John" | "Joseph" | number;
+
+// let imiona: names;
+// imiona = "Joseph";
+// imiona = "John";
+// imiona = 15;
+// imiona = "Adam";
+// imiona = "Jamal";
+// const fn = (a: names, b: number): void => {
+//   for (let i = 0; i < b; i++) {
+//     console.log(a);
+//   }
+// };
+
+//fn("Adam", 5);
