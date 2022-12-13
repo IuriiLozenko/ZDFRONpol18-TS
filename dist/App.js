@@ -83,3 +83,19 @@ const changeColor = (element, color) => {
 };
 changeColor(todoPararaph, "red");
 changeColor(addTodoLabel, "green");
+const john = {
+    name: "John Smith",
+    age: 30,
+    married: true,
+    profession: "UX Designer",
+};
+const anne = {
+    name: "Anne Brown",
+    age: 30,
+    profession: "Front-end developer",
+};
+// Zad 5.
+// 1. Stwórz 2 obiekty osób które mają zawierać imię, nazwisko, wiek, zawód i zwierzę domowe. Otypuj te obiekty wg odpowiednio interfejsu.
+// 2. Osobie nr urodziło się dziecko, zaktualizuj interface z pkt 1 dopisując do niego pole parent i zaktualizuj odpowiednio same obiekty.
+// 3. Stwórz interface Child dla nowonarodzonego dziecka, stwórz dla niego też obiekt w którym to dziecko opiszesz. Sam interface Child ma rozszerzać interface z pkt 1 o pole child (true/false)
+// 4. Stwórz funkcję canIBuyBeer, funkcja przyjmuje obiekt osoby lub obiekt dziecka. Na podstawie pola age wykonaj console.log('Hello *imie, nazwisko* you are *wiek* years old, you *can/can't w zależności od wieku* buy beer')
