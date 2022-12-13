@@ -46,7 +46,40 @@ button.addEventListener("click", () => {
     // 1. W jakiś sposób wylosuj czy użytkownik ma zniżke czy jej nie ma i zapisz do zmiennej true albo false (Math.random())
     const hasDiscount = Math.random() > 0.5 ? true : false; // Math.random zwraca liczbe od 0 1
     // 2. Ściągnij wartość z inputu textowego id name (wybranie inputu + ściągnięcie value, samo value zapisz do zmiennej)
-    const inputValue = +document.querySelector("input").value;
+    //   const inputValue = +document.querySelector("input").value;
+    const input = document.querySelector("input");
+    const inputValueRaw = input.value;
+    const inputValue = +inputValueRaw; // Number(inputValueRaw)
     // 3. Wykonaj console loga `You have to pay *tutaj cena obliczona przez funkcję calculatePrice, wywołaj ją tu wprowadzając jako argumenty wartości z pkt 2 i pkt 1.
     console.log(`You have to pay ${calculatePrice(inputValue, hasDiscount)}`);
 });
+let multipleTypes = 0;
+let multipleTypes1 = "123";
+let multipleTypes2 = true;
+let multipleTypes3 = false;
+// let imiona: names;
+// imiona = "Joseph";
+// imiona = "John";
+// imiona = 15;
+// imiona = "Adam";
+// imiona = "Jamal";
+// const fn = (a: names, b: number): void => {
+//   for (let i = 0; i < b; i++) {
+//     console.log(a);
+//   }
+// };
+//fn("Adam", 5);
+//Element.style.color = 'red'
+// Zad 3.
+// 1. Wybierz paragraf "Todo:", odpowiednio go otypuj jeżeli trzeba. Wybierz również label "Add todo:"
+// 2. Stwórz funkcję changeColor, funkcja będzie przyjmowała 2 argumenty: element który ma pokolorować i color który ma zostać użyty.
+// Element na pierwszym argumencie może być typu paragraf lub label, natomiast kolor który może zostać użyty to red lub green. Posiadając tą informacje otypuj odpowiednio parametry funkcji changeColor.
+// 3. W środku funkcji ustawiaj kolor podanego w argumencie elementu na kolor który również został podany w parametrze.
+// 4. Przetestuj funkcję na elementach wybranych w pkt 1.
+const todoPararaph = document.querySelector("p");
+const addTodoLabel = document.querySelector("label");
+const changeColor = (element, color) => {
+    element.style.color = color;
+};
+changeColor(todoPararaph, "red");
+changeColor(addTodoLabel, "green");

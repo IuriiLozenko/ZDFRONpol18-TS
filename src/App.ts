@@ -103,3 +103,24 @@ type names = "John" | "Joseph" | number;
 // };
 
 //fn("Adam", 5);
+
+//Element.style.color = 'red'
+// Zad 3.
+// 1. Wybierz paragraf "Todo:", odpowiednio go otypuj jeżeli trzeba. Wybierz również label "Add todo:"
+// 2. Stwórz funkcję changeColor, funkcja będzie przyjmowała 2 argumenty: element który ma pokolorować i color który ma zostać użyty.
+// Element na pierwszym argumencie może być typu paragraf lub label, natomiast kolor który może zostać użyty to red lub green. Posiadając tą informacje otypuj odpowiednio parametry funkcji changeColor.
+// 3. W środku funkcji ustawiaj kolor podanego w argumencie elementu na kolor który również został podany w parametrze.
+// 4. Przetestuj funkcję na elementach wybranych w pkt 1.
+
+const todoPararaph = document.querySelector("p");
+const addTodoLabel = document.querySelector("label");
+
+type elementType = HTMLParagraphElement | HTMLLabelElement;
+type color = "red" | "green";
+
+const changeColor = (element: elementType, color: color): void => {
+  element.style.color = color;
+};
+
+changeColor(todoPararaph, "red");
+changeColor(addTodoLabel, "green");
